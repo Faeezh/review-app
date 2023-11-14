@@ -1,26 +1,16 @@
-import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 
-function Test({ myTest , bgColor }) {
-    const testStyles = {
-        backgroundColor: bgColor,
-    }
+function Test() {
+    const [color, setColor] = useState("green")
     
   return (
-    <div style={testStyles}>
-      <h1 style={{ color: 'yellow' }}>{myTest}</h1>
+    <div>
+      <div style= {{backgroundColor: color, height: '100px'}}></div>
+      <input type="text" value={color} onChange={(e) => setColor(e.target.value)} />
+      <button style={{backgroundColor: color, height: '30px', width: '60px'}} onClick={() => setColor('red')}>change</button>
     </div>
   )
 }
 
-Test.defaultProps = {
-    myTest: 'FeedBack UI',
-    bgColor: 'rgba(0,0,0,0.4)',
-}
-
-Test.propTypes = {
-    text: PropTypes.string,
-    bgColor: PropTypes.string,
-    textColor: PropTypes.string,
-}
 
 export default Test

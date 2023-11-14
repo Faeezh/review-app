@@ -1,5 +1,5 @@
 import Header from './components/Header'
-import Test from './components/Test'
+//import Test from './components/Test'
 import FeedbackList from './components/FeedbackList';
 import Card from './components/shared/Card';
 import FeedbackStats from './components/FeedbackStats';
@@ -12,7 +12,7 @@ function App() {
     <FeedbackProvider>
       <>
         <Header bgColor='grey' text='Props Says Hello'/>
-        <Test />
+        {/*<Test />*/}
         <div className="container">
           <FeedbackForm />
           <FeedbackStats />
